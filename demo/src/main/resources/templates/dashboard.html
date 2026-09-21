@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Examination Portal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #1f2937;
+        }
+        .container {
+            width: min(1100px, 90%);
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 18px 24px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+            margin-bottom: 28px;
+        }
+        .brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .nav {
+            display: flex;
+            gap: 18px;
+            color: #475569;
+            font-weight: 600;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+        }
+        .card h3 {
+            margin: 0 0 12px;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        .card strong {
+            font-size: 2rem;
+        }
+        .panel {
+            margin-top: 28px;
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+        th, td {
+            text-align: left;
+            padding: 14px 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="brand">Examination Portal</div>
+            <div class="nav">
+                <span>Dashboard</span>
+                <span>Exams</span>
+                <span>Results</span>
+                <span>Profile</span>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Upcoming Exams</h3>
+                <strong>05</strong>
+            </div>
+            <div class="card">
+                <h3>Completed</h3>
+                <strong>12</strong>
+            </div>
+            <div class="card">
+                <h3>Average Score</h3>
+                <strong>88%</strong>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Recent Activity</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exam</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java Fundamentals</td>
+                        <td>2026-09-20</td>
+                        <td>Passed</td>
+                    </tr>
+                    <tr>
+                        <td>Database Quiz</td>
+                        <td>2026-09-18</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>2026-09-15</td>
+                        <td>Passed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
