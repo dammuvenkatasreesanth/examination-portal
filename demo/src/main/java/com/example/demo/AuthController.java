@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,7 +49,11 @@ public class AuthController {
             Model model) {
 
         if (users.containsKey(email) && users.get(email).equals(password)) {
-            return "redirect:/dashboard";
+            email = email.trim();
+            password = password.trim();
+            if(email.equals(password)) return"change the password email and password must be different"; // Store the logged-in user's email in a variable
+            return "redirect:/login?success";
+
         }
 
         model.addAttribute("error", "Invalid email or password.");
